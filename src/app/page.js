@@ -24,7 +24,7 @@ export default function Home() {
         <div className=" relative h-full flex flex-col justify-center items-center text-center px-4 md:px-6 py-12 space-y-6 text-white">
           <div className="space-y-4 max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              Discover the World's Most Amazing Places
+              Discover the World&apos;s Most Amazing Places
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
               Find and book your perfect getaway with our curated selection of
@@ -184,7 +184,7 @@ export default function Home() {
               Why Choose Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              We're dedicated to making your travel dreams come true with
+              We&apos;re dedicated to making your travel dreams come true with
               exceptional service and unforgettable experiences
             </p>
           </div>
@@ -250,7 +250,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-600 italic">
-                    "{testimonial.comment}"
+                    &quot;{testimonial.comment}&quot;
                   </p>
                 </CardContent>
               </Card>

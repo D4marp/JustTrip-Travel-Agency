@@ -249,7 +249,7 @@ export default function DestinationsPage() {
         <div className="px-4 md:px-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
-              Can't Find What You're Looking For?
+              Can&apos;t Find What You&apos;re Looking For?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               Our travel experts can create a custom itinerary tailored to your

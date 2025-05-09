@@ -23,8 +23,8 @@ export default function AboutPage() {
             About Wanderlust Travel
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
-            We're passionate about creating unforgettable travel experiences for
-            our clients
+            We&apos;re passionate about creating unforgettable travel
+            experiences for our clients
           </p>
         </div>
       </section>
@@ -40,8 +40,8 @@ export default function AboutPage() {
               <div className="space-y-4 text-gray-600">
                 <p>
                   Founded in 2005, Wanderlust Travel began with a simple
-                  mission: to help people experience the world's most amazing
-                  destinations with ease, comfort, and authenticity.
+                  mission: to help people experience the world&apos;s most
+                  amazing destinations with ease, comfort, and authenticity.
                 </p>
                 <p>
                   What started as a small team of passionate travelers has grown
@@ -49,9 +49,9 @@ export default function AboutPage() {
                   thousands of happy travelers each year.
                 </p>
                 <p>
-                  Despite our growth, we've never lost sight of what matters
-                  most - creating personalized travel experiences that transform
-                  lives and create lasting memories.
+                  Despite our growth, we&apos;ve never lost sight of what
+                  matters most - creating personalized travel experiences that
+                  transform lives and create lasting memories.
                 </p>
               </div>
               <div className="mt-8 grid grid-cols-2 gap-4">

@@ -400,7 +400,7 @@ export default function PackagesPage() {
                     ))}
                   </div>
                   <p className="text-gray-600 italic">
-                    "{testimonial.comment}"
+                    &quot;{testimonial.comment}&quot;
                   </p>
                 </CardContent>
               </Card>
