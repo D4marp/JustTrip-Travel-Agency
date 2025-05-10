@@ -16,10 +16,10 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-screen">
       {/* Contact Form Section */}
       <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+              <h1 className="text-3xl font-bold  text-gray-900 mb-4">
                 Contact Us
               </h1>
               <p className="text-xl text-gray-600 mb-8">
@@ -152,7 +152,7 @@ export default function ContactPage() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-teal-600 hover:bg-teal-700"
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-base cursor-pointer py-6"
                 >
                   <Send className="h-4 w-4 mr-2" />
                   Send Message
@@ -165,9 +165,9 @@ export default function ContactPage() {
 
       {/* Map Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container px-4 md:px-6">
+        <div className=" px-4 md:px-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
               Our Locations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -175,13 +175,17 @@ export default function ContactPage() {
             </p>
           </div>
           <div className="aspect-video bg-gray-200 rounded-xl overflow-hidden">
-            {/* This would be replaced with an actual map component */}
-            <div className="h-full w-full flex items-center justify-center">
-              <p className="text-gray-500">
-                Interactive Map Would Be Displayed Here
-              </p>
+            <div className="h-full w-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30766738.48171446!2d60.9691763862997!3d19.725163578221917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1746880287802!5m2!1sen!2sin"
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             {offices.map((office, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
@@ -196,7 +200,7 @@ export default function ContactPage() {
 
       {/* FAQ Section */}
       <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
               Frequently Asked Questions

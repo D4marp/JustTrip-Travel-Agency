@@ -11,15 +11,15 @@ export default function AboutPage() {
       <section className="relative w-full h-[50vh] bg-gradient-to-r from-teal-500 to-cyan-600">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/placeholder.svg?height=800&width=1600"
+            src="/travel-team-bg.avif"
             alt="Team of travel experts"
             fill
             className="object-cover opacity-30"
             priority
           />
         </div>
-        <div className="container relative h-full flex flex-col justify-center items-center px-4 md:px-6 py-12 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+        <div className="relative h-full flex flex-col justify-center items-center px-4 md:px-10 py-12 text-center text-white">
+          <h1 className="text-4xl md:text-5xl font-bold  mb-4">
             About Wanderlust Travel
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
@@ -31,7 +31,7 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
@@ -75,7 +75,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[500px] rounded-xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=1000&width=800"
+                src="/travel-team-action.webp"
                 alt="Our team in action"
                 fill
                 className="object-cover"
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
       {/* Our Values */}
       <section className="py-16 bg-gray-50">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
               Our Values
@@ -112,7 +112,7 @@ export default function AboutPage() {
 
       {/* Our Team */}
       <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
               Meet Our Team
@@ -144,7 +144,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="py-16 bg-teal-50">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
               Ready to Start Your Adventure?
@@ -155,7 +155,10 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-teal-600 hover:bg-teal-700">
+                <Button
+                  size="lg"
+                  className="bg-teal-600 hover:bg-teal-700 text-base cursor-pointer"
+                >
                   Contact Us
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -164,7 +167,7 @@ export default function AboutPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-teal-600 text-teal-600 hover:bg-teal-50"
+                  className="border-teal-600 text-teal-600 hover:bg-teal-50 cursor-pointer text-base"
                 >
                   Explore Destinations
                 </Button>
@@ -209,25 +212,25 @@ const team = [
   {
     name: "Emily Chen",
     role: "Founder & CEO",
-    photo: "/placeholder.svg?height=400&width=300",
+    photo: "/user1.jpg",
     bio: "With over 20 years of travel industry experience, Emily founded Wanderlust to share her passion for exploration.",
   },
   {
     name: "David Rodriguez",
     role: "Head of Operations",
-    photo: "/placeholder.svg?height=400&width=300",
+    photo: "/user4.avif",
     bio: "David ensures that every trip runs smoothly, with meticulous attention to logistics and customer satisfaction.",
   },
   {
     name: "Sarah Johnson",
     role: "Destination Expert - Asia",
-    photo: "/placeholder.svg?height=400&width=300",
+    photo: "/user3.jpg",
     bio: "Having lived in 5 Asian countries, Sarah brings authentic local knowledge to our Asian travel packages.",
   },
   {
     name: "Michael Okonkwo",
     role: "Destination Expert - Africa",
-    photo: "/placeholder.svg?height=400&width=300",
+    photo: "/user2.jpg",
     bio: "Born and raised in Kenya, Michael specializes in creating authentic African safari experiences.",
   },
 ];

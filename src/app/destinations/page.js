@@ -28,7 +28,7 @@ export default function DestinationsPage() {
           />
         </div>
         <div className="relative h-full flex flex-col justify-center items-center px-4 md:px-10 py-12 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold  mb-4">
             Explore Our Destinations
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
@@ -210,7 +210,7 @@ export default function DestinationsPage() {
       <section className="py-16 bg-white">
         <div className="px-4 md:px-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
               Explore by Region
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -248,7 +248,7 @@ export default function DestinationsPage() {
       <section className="py-16 bg-teal-50">
         <div className="px-4 md:px-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
               Can&apos;t Find What You&apos;re Looking For?
             </h2>
             <p className="text-xl text-gray-600 mb-8">

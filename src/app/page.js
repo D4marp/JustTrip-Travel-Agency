@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <div className=" relative h-full flex flex-col justify-center items-center text-center px-4 md:px-6 py-12 space-y-6 text-white">
           <div className="space-y-4 max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
+            <h1 className="text-4xl md:text-6xl font-bold ">
               Discover the World&apos;s Most Amazing Places
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
@@ -96,7 +96,7 @@ export default function Home() {
       <section className="py-16 bg-gray-50">
         <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
               Popular Destinations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
@@ -180,7 +180,7 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className=" px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
               Why Choose Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
@@ -209,7 +209,7 @@ export default function Home() {
       <section className="py-16 bg-teal-50">
         <div className=" px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
               What Our Travelers Say
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
@@ -265,7 +265,7 @@ export default function Home() {
 
         <div className="px-4 md:px-10 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-extrabold mb-4 tracking-tight">
+            <h2 className="text-4xl font-extrabold mb-4 ">
               Get Travel Inspiration & Exclusive Offers
             </h2>
             <p className="text-lg text-white/80 mb-8">

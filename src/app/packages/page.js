@@ -20,15 +20,15 @@ export default function PackagesPage() {
       <section className="relative w-full h-[50vh] bg-gradient-to-r from-teal-500 to-cyan-600">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/placeholder.svg?height=800&width=1600"
+            src="/travel-package.jpg"
             alt="Travel packages"
             fill
             className="object-cover opacity-30"
             priority
           />
         </div>
-        <div className="container relative h-full flex flex-col justify-center items-center px-4 md:px-6 py-12 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+        <div className=" relative h-full flex flex-col justify-center items-center px-4 md:px-10 py-12 text-center text-white">
+          <h1 className="text-4xl md:text-5xl font-bold  mb-4">
             Travel Packages
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
@@ -39,11 +39,11 @@ export default function PackagesPage() {
 
       {/* Filter Section */}
       <section className="py-8 bg-white border-b">
-        <div className="container px-4 md:px-6">
+        <div className=" px-4 md:px-10">
           <div className="flex flex-col md:flex-row gap-4 items-center">
-            <div className="flex flex-wrap gap-4 w-full">
+            <div className="flex gap-4 w-full justify-center max-md:flex-wrap">
               <Select>
-                <SelectTrigger className="w-[180px]">
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Destination" />
                 </SelectTrigger>
                 <SelectContent>
@@ -57,7 +57,7 @@ export default function PackagesPage() {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-[180px]">
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Duration" />
                 </SelectTrigger>
                 <SelectContent>
@@ -70,7 +70,7 @@ export default function PackagesPage() {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-[180px]">
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Budget" />
                 </SelectTrigger>
                 <SelectContent>
@@ -83,7 +83,7 @@ export default function PackagesPage() {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-[180px]">
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Travel Style" />
                 </SelectTrigger>
                 <SelectContent>
@@ -106,9 +106,9 @@ export default function PackagesPage() {
 
       {/* Featured Packages */}
       <section className="py-12 bg-gray-50">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
               Featured Packages
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
@@ -121,7 +121,7 @@ export default function PackagesPage() {
             {featuredPackages.map((pkg, index) => (
               <Card
                 key={index}
-                className="overflow-hidden border-none shadow-md hover:shadow-xl transition-shadow"
+                className="overflow-hidden border-none shadow-md hover:shadow-xl transition-shadow p-0"
               >
                 <div className="relative h-64 w-full">
                   <Image
@@ -189,7 +189,7 @@ export default function PackagesPage() {
                         </span>
                       </p>
                     </div>
-                    <Button className="bg-teal-600 hover:bg-teal-700">
+                    <Button className="bg-teal-600 hover:bg-teal-700 cursor-pointer">
                       View Details
                     </Button>
                   </div>
@@ -202,9 +202,9 @@ export default function PackagesPage() {
 
       {/* Package Categories */}
       <section className="py-16 bg-white">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
               Explore by Travel Style
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
@@ -241,9 +241,9 @@ export default function PackagesPage() {
 
       {/* All Packages */}
       <section className="py-16 bg-gray-50">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
               All Travel Packages
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
@@ -256,7 +256,7 @@ export default function PackagesPage() {
             {allPackages.map((pkg, index) => (
               <Card
                 key={index}
-                className="overflow-hidden border-none shadow-sm hover:shadow-md transition-shadow"
+                className="overflow-hidden border-none shadow-sm hover:shadow-md transition-shadow p-0"
               >
                 <div className="relative h-48 w-full">
                   <Image
@@ -303,7 +303,7 @@ export default function PackagesPage() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="border-teal-600 text-teal-600 hover:bg-teal-50"
+                      className="border-teal-600 cursor-pointer text-teal-600 hover:bg-teal-50"
                     >
                       View Details
                     </Button>
@@ -318,35 +318,35 @@ export default function PackagesPage() {
               <Button
                 variant="outline"
                 size="icon"
-                className="w-10 h-10 rounded-md"
+                className="w-10 h-10 rounded-md cursor-pointer"
               >
                 1
               </Button>
               <Button
                 variant="outline"
                 size="icon"
-                className="w-10 h-10 rounded-md"
+                className="w-10 h-10 rounded-md cursor-pointer"
               >
                 2
               </Button>
               <Button
                 variant="outline"
                 size="icon"
-                className="w-10 h-10 rounded-md"
+                className="w-10 h-10 rounded-md cursor-pointer"
               >
                 3
               </Button>
               <Button
                 variant="outline"
                 size="icon"
-                className="w-10 h-10 rounded-md"
+                className="w-10 h-10 rounded-md cursor-pointer"
               >
                 ...
               </Button>
               <Button
                 variant="outline"
                 size="icon"
-                className="w-10 h-10 rounded-md"
+                className="w-10 h-10 rounded-md cursor-pointer"
               >
                 8
               </Button>
@@ -357,9 +357,9 @@ export default function PackagesPage() {
 
       {/* Testimonials */}
       <section className="py-16 bg-teal-50">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               What Our Travelers Say
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
@@ -411,7 +411,7 @@ export default function PackagesPage() {
 
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-teal-600 to-cyan-700 text-white">
-        <div className="container px-4 md:px-6">
+        <div className="px-4 md:px-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
               Ready to Book Your Dream Vacation?
@@ -422,14 +422,13 @@ export default function PackagesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-teal-600 hover:bg-white/90"
+                className="bg-white text-teal-600 hover:bg-white/90 text-base cursor-pointer"
               >
                 Browse All Packages
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/20"
+                className="bg-white text-teal-600 hover:bg-white/90 text-base cursor-pointer"
               >
                 Contact a Travel Expert
               </Button>
@@ -446,7 +445,7 @@ const featuredPackages = [
   {
     name: "Greek Islands Explorer",
     location: "Greece",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/santorini.jpg",
     rating: 4.9,
     duration: "10 Days",
     groupSize: "Max 12 People",
@@ -465,7 +464,7 @@ const featuredPackages = [
   {
     name: "Japan Cultural Journey",
     location: "Japan",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/japan-cultural.jpg",
     rating: 4.8,
     duration: "12 Days",
     groupSize: "Max 10 People",
@@ -482,7 +481,7 @@ const featuredPackages = [
   {
     name: "Costa Rica Adventure",
     location: "Costa Rica",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/costa-rica-adventure.jpg",
     rating: 4.9,
     duration: "8 Days",
     groupSize: "Max 14 People",
@@ -505,49 +504,49 @@ const travelStyles = [
     id: "adventure",
     name: "Adventure",
     description: "For thrill-seekers and active travelers",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/adventure.jpg",
   },
   {
     id: "beach",
     name: "Beach & Relaxation",
     description: "Unwind on the world's most beautiful shores",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/beach.jpg",
   },
   {
     id: "cultural",
     name: "Cultural Immersion",
     description: "Deep dive into local traditions and history",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/cultural.jpg",
   },
   {
     id: "luxury",
     name: "Luxury Escapes",
     description: "Premium experiences with exceptional service",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/luxury.jpg",
   },
   {
     id: "family",
     name: "Family Friendly",
     description: "Fun and educational for all ages",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/family.jpg",
   },
   {
     id: "honeymoon",
     name: "Honeymoon",
     description: "Romantic getaways for newlyweds",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/honeymoon.jpg",
   },
   {
     id: "wildlife",
     name: "Wildlife & Nature",
     description: "Explore natural wonders and ecosystems",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/wildlife.jpg",
   },
   {
     id: "food",
     name: "Food & Wine",
     description: "Culinary journeys for food enthusiasts",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/food-wine.jpg",
   },
 ];
 
@@ -555,7 +554,7 @@ const allPackages = [
   {
     name: "Italian Highlights",
     location: "Italy",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/italian.webp",
     rating: 4.7,
     duration: "9 Days",
     groupSize: "Max 16",
@@ -565,7 +564,7 @@ const allPackages = [
   {
     name: "Thailand Explorer",
     location: "Thailand",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/thailand.jpg",
     rating: 4.8,
     duration: "11 Days",
     groupSize: "Max 12",
@@ -574,7 +573,7 @@ const allPackages = [
   {
     name: "Peruvian Andes Trek",
     location: "Peru",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/peruvian-andes.jpg",
     rating: 4.9,
     duration: "10 Days",
     groupSize: "Max 10",
@@ -584,7 +583,7 @@ const allPackages = [
   {
     name: "Moroccan Magic",
     location: "Morocco",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/moroccan.png",
     rating: 4.7,
     duration: "8 Days",
     groupSize: "Max 14",
@@ -593,7 +592,7 @@ const allPackages = [
   {
     name: "Australian Outback",
     location: "Australia",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/australian.png",
     rating: 4.8,
     duration: "12 Days",
     groupSize: "Max 12",
@@ -603,7 +602,7 @@ const allPackages = [
   {
     name: "South African Safari",
     location: "South Africa",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/african-safari.jpg",
     rating: 4.9,
     duration: "10 Days",
     groupSize: "Max 8",
@@ -613,7 +612,7 @@ const allPackages = [
   {
     name: "Vietnam & Cambodia",
     location: "Southeast Asia",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/vietnam-and-cambodia.jpg",
     rating: 4.8,
     duration: "14 Days",
     groupSize: "Max 12",
@@ -622,7 +621,7 @@ const allPackages = [
   {
     name: "Icelandic Adventure",
     location: "Iceland",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/iceland-adventure.webp",
     rating: 4.8,
     duration: "7 Days",
     groupSize: "Max 10",
@@ -632,7 +631,7 @@ const allPackages = [
   {
     name: "Egyptian Wonders",
     location: "Egypt",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/egytian.webp",
     rating: 4.7,
     duration: "9 Days",
     groupSize: "Max 16",
@@ -645,7 +644,7 @@ const testimonials = [
   {
     name: "James Wilson",
     package: "Greek Islands Explorer",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "/user2.jpg",
     rating: 5,
     comment:
       "The Greek Islands package exceeded all our expectations. The private sunset cruise in Santorini was absolutely magical and something we'll remember forever.",
@@ -653,7 +652,7 @@ const testimonials = [
   {
     name: "Aiko Tanaka",
     package: "Japan Cultural Journey",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "/user1.jpg",
     rating: 5,
     comment:
       "As someone of Japanese heritage, I was impressed by the authenticity of the cultural experiences. The ryokan stay was a highlight and our guide was exceptional.",
@@ -661,7 +660,7 @@ const testimonials = [
   {
     name: "Carlos Mendez",
     package: "Costa Rica Adventure",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "/user3.jpg",
     rating: 4,
     comment:
       "Great adventure package with the perfect mix of activities and relaxation. Zip-lining through the cloud forest was incredible! Only giving 4 stars because one of the hotels wasn't as nice as expected.",
