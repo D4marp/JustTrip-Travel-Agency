@@ -42,7 +42,7 @@ export default function DestinationsPage() {
       <section className="py-8 bg-white border-b">
         <div className="px-4 md:px-10">
           <div className="flex flex-col md:flex-row gap-4 items-center">
-            <div className="relative flex-1">
+            <div className="relative flex-1 max-md:w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
               <Input
                 type="text"
@@ -50,9 +50,9 @@ export default function DestinationsPage() {
                 className="pl-10"
               />
             </div>
-            <div className="flex flex-wrap gap-4 w-full md:w-auto">
+            <div className="flex max-md:flex-wrap gap-4 w-full md:w-auto">
               <Select>
-                <SelectTrigger className="w-[180px] cursor-pointer">
+                <SelectTrigger className="w-full cursor-pointer">
                   <SelectValue placeholder="Region" />
                 </SelectTrigger>
                 <SelectContent>
@@ -66,7 +66,7 @@ export default function DestinationsPage() {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-[180px] cursor-pointer">
+                <SelectTrigger className="w-full cursor-pointer">
                   <SelectValue placeholder="Trip Type" />
                 </SelectTrigger>
                 <SelectContent>
@@ -80,7 +80,7 @@ export default function DestinationsPage() {
               </Select>
 
               <Select>
-                <SelectTrigger className="w-[180px] cursor-pointer">
+                <SelectTrigger className="w-full cursor-pointer">
                   <SelectValue placeholder="Duration" />
                 </SelectTrigger>
                 <SelectContent>
