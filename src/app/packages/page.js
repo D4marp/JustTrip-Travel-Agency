@@ -20,8 +20,8 @@ export default function PackagesPage() {
       <section className="relative w-full h-[50vh] bg-gradient-to-r from-teal-500 to-cyan-600">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/travel-package.jpg"
-            alt="Travel packages"
+            src="/bromo.jpg"
+            alt="Paket perjalanan"
             fill
             className="object-cover opacity-30"
             priority
@@ -29,91 +29,24 @@ export default function PackagesPage() {
         </div>
         <div className=" relative h-full flex flex-col justify-center items-center px-4 md:px-10 py-12 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold  mb-4">
-            Travel Packages
+            Paket Perjalanan
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
-            Expertly curated travel experiences for every type of adventurer
+            Pengalaman perjalanan yang telah dikurasi ahli untuk setiap jenis petualang
           </p>
         </div>
       </section>
 
-      {/* Filter Section */}
-      <section className="py-8 bg-white border-b">
-        <div className=" px-4 md:px-10">
-          <div className="flex flex-col md:flex-row gap-4 items-center">
-            <div className="flex gap-4 w-full justify-center max-md:flex-wrap">
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Destination" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Destinations</SelectItem>
-                  <SelectItem value="europe">Europe</SelectItem>
-                  <SelectItem value="asia">Asia</SelectItem>
-                  <SelectItem value="americas">Americas</SelectItem>
-                  <SelectItem value="africa">Africa</SelectItem>
-                  <SelectItem value="oceania">Oceania</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Duration" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Any Duration</SelectItem>
-                  <SelectItem value="short">1-3 Days</SelectItem>
-                  <SelectItem value="medium">4-7 Days</SelectItem>
-                  <SelectItem value="long">8-14 Days</SelectItem>
-                  <SelectItem value="extended">15+ Days</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Budget" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Any Budget</SelectItem>
-                  <SelectItem value="economy">Economy</SelectItem>
-                  <SelectItem value="standard">Standard</SelectItem>
-                  <SelectItem value="premium">Premium</SelectItem>
-                  <SelectItem value="luxury">Luxury</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Travel Style" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Styles</SelectItem>
-                  <SelectItem value="beach">Beach</SelectItem>
-                  <SelectItem value="adventure">Adventure</SelectItem>
-                  <SelectItem value="cultural">Cultural</SelectItem>
-                  <SelectItem value="family">Family</SelectItem>
-                  <SelectItem value="romantic">Romantic</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Button className="bg-teal-600 hover:bg-teal-700">
-                Search Packages
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    
       {/* Featured Packages */}
       <section className="py-12 bg-gray-50">
         <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
             <h2 className="text-3xl font-bold  text-gray-900 mb-4">
-              Featured Packages
+              Paket Unggulan
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Our most popular travel experiences, handpicked for exceptional
-              value and unforgettable memories
+              Pengalaman perjalanan paling populer kami, dipilih khusus untuk nilai luar biasa dan kenangan tak terlupakan
             </p>
           </div>
 
@@ -132,7 +65,7 @@ export default function PackagesPage() {
                   />
                   {pkg.discount && (
                     <div className="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded text-sm font-medium">
-                      {pkg.discount}% OFF
+                      {pkg.discount}% DISKON
                     </div>
                   )}
                   {pkg.tag && (
@@ -185,12 +118,12 @@ export default function PackagesPage() {
                       <p className="font-bold text-teal-600 text-xl">
                         ${pkg.price}{" "}
                         <span className="text-sm font-normal text-gray-500">
-                          per person
+                          per orang
                         </span>
                       </p>
                     </div>
                     <Button className="bg-teal-600 hover:bg-teal-700 cursor-pointer">
-                      View Details
+                      Lihat Detail
                     </Button>
                   </div>
                 </CardContent>
@@ -205,10 +138,10 @@ export default function PackagesPage() {
         <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
             <h2 className="text-3xl font-bold  text-gray-900 mb-4">
-              Explore by Travel Style
+              Jelajahi berdasarkan Gaya Perjalanan
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Find the perfect package that matches your travel preferences
+              Temukan paket yang sempurna sesuai preferensi perjalanan Anda
             </p>
           </div>
 
@@ -244,11 +177,10 @@ export default function PackagesPage() {
         <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
             <h2 className="text-3xl font-bold  text-gray-900 mb-4">
-              All Travel Packages
+              Semua Paket Perjalanan
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Browse our complete collection of expertly crafted travel
-              experiences
+              Jelajahi koleksi lengkap pengalaman perjalanan yang dibuat oleh ahli
             </p>
           </div>
 
@@ -297,7 +229,7 @@ export default function PackagesPage() {
                     <p className="font-bold text-teal-600">
                       ${pkg.price}{" "}
                       <span className="text-xs font-normal text-gray-500">
-                        per person
+                        per orang
                       </span>
                     </p>
                     <Button
@@ -305,7 +237,7 @@ export default function PackagesPage() {
                       size="sm"
                       className="border-teal-600 cursor-pointer text-teal-600 hover:bg-teal-50"
                     >
-                      View Details
+                      Lihat Detail
                     </Button>
                   </div>
                 </CardContent>
@@ -313,45 +245,6 @@ export default function PackagesPage() {
             ))}
           </div>
 
-          <div className="flex justify-center mt-12">
-            <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                1
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                2
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                3
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                ...
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                8
-              </Button>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -360,10 +253,10 @@ export default function PackagesPage() {
         <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Our Travelers Say
+              Apa Kata Pelancong Kami
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Real experiences from travelers who booked our packages
+              Pengalaman nyata dari pelancong yang memesan paket kami
             </p>
           </div>
 
@@ -414,23 +307,23 @@ export default function PackagesPage() {
         <div className="px-4 md:px-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Ready to Book Your Dream Vacation?
+              Siap Memesan Liburan Impian Anda?
             </h2>
             <p className="text-xl mb-8 text-white/90">
-              Our travel experts are ready to help you plan the perfect trip
+              Para ahli perjalanan kami siap membantu Anda merencanakan perjalanan yang sempurna
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-white text-teal-600 hover:bg-white/90 text-base cursor-pointer"
               >
-                Browse All Packages
+                Jelajahi Semua Paket
               </Button>
               <Button
                 size="lg"
                 className="bg-white text-teal-600 hover:bg-white/90 text-base cursor-pointer"
               >
-                Contact a Travel Expert
+                Hubungi Ahli Perjalanan
               </Button>
             </div>
           </div>
@@ -443,58 +336,58 @@ export default function PackagesPage() {
 // Sample data
 const featuredPackages = [
   {
-    name: "Greek Islands Explorer",
-    location: "Greece",
+    name: "Penjelajah Pulau Yunani",
+    location: "Yunani",
     image: "/santorini.jpg",
     rating: 4.9,
-    duration: "10 Days",
-    groupSize: "Max 12 People",
-    season: "Apr-Oct",
+    duration: "10 Hari",
+    groupSize: "Maks 12 Orang",
+    season: "Apr-Okt",
     price: 2499,
     originalPrice: 2999,
     discount: 15,
-    tag: "Best Seller",
+    tag: "Terlaris",
     highlights: [
-      "Visit Athens, Mykonos, and Santorini",
-      "Private sunset cruise in Santorini",
-      "Guided tour of ancient ruins",
-      "Island hopping by ferry",
+      "Kunjungi Athena, Mykonos, dan Santorini",
+      "Pelayaran sunset pribadi di Santorini",
+      "Tur terpandu reruntuhan kuno",
+      "Island hopping dengan feri",
     ],
   },
   {
-    name: "Japan Cultural Journey",
-    location: "Japan",
+    name: "Perjalanan Budaya Jepang",
+    location: "Jepang",
     image: "/japan-cultural.jpg",
     rating: 4.8,
-    duration: "12 Days",
-    groupSize: "Max 10 People",
-    season: "Year Round",
+    duration: "12 Hari",
+    groupSize: "Maks 10 Orang",
+    season: "Sepanjang Tahun",
     price: 3299,
-    tag: "Cultural",
+    tag: "Budaya",
     highlights: [
-      "Tokyo, Kyoto, and Osaka exploration",
-      "Traditional tea ceremony experience",
-      "Mt. Fuji day trip",
-      "Stay in a traditional ryokan",
+      "Eksplorasi Tokyo, Kyoto, dan Osaka",
+      "Pengalaman upacara teh tradisional",
+      "Trip satu hari ke Gunung Fuji",
+      "Menginap di ryokan tradisional",
     ],
   },
   {
-    name: "Costa Rica Adventure",
-    location: "Costa Rica",
+    name: "Petualangan Kosta Rika",
+    location: "Kosta Rika",
     image: "/costa-rica-adventure.jpg",
     rating: 4.9,
-    duration: "8 Days",
-    groupSize: "Max 14 People",
-    season: "Dec-Apr",
+    duration: "8 Hari",
+    groupSize: "Maks 14 Orang",
+    season: "Des-Apr",
     price: 1899,
     originalPrice: 2199,
     discount: 10,
-    tag: "Adventure",
+    tag: "Petualangan",
     highlights: [
-      "Arenal Volcano National Park",
-      "Zip-lining through cloud forests",
-      "Wildlife spotting in Manuel Antonio",
-      "White water rafting experience",
+      "Taman Nasional Gunung Berapi Arenal",
+      "Zip-lining melalui hutan awan",
+      "Pengamatan satwa liar di Manuel Antonio",
+      "Pengalaman arung jeram",
     ],
   },
 ];
@@ -502,167 +395,167 @@ const featuredPackages = [
 const travelStyles = [
   {
     id: "adventure",
-    name: "Adventure",
-    description: "For thrill-seekers and active travelers",
+    name: "Petualangan",
+    description: "Untuk pencari sensasi dan pelancong aktif",
     image: "/adventure.jpg",
   },
   {
     id: "beach",
-    name: "Beach & Relaxation",
-    description: "Unwind on the world's most beautiful shores",
+    name: "Pantai & Relaksasi",
+    description: "Bersantai di pantai terindah dunia",
     image: "/beach.jpg",
   },
   {
     id: "cultural",
-    name: "Cultural Immersion",
-    description: "Deep dive into local traditions and history",
+    name: "Pencelupan Budaya",
+    description: "Menyelami tradisi dan sejarah lokal",
     image: "/cultural.jpg",
   },
   {
     id: "luxury",
-    name: "Luxury Escapes",
-    description: "Premium experiences with exceptional service",
+    name: "Liburan Mewah",
+    description: "Pengalaman premium dengan layanan luar biasa",
     image: "/luxury.jpg",
   },
   {
     id: "family",
-    name: "Family Friendly",
-    description: "Fun and educational for all ages",
+    name: "Ramah Keluarga",
+    description: "Menyenangkan dan edukatif untuk segala usia",
     image: "/family.jpg",
   },
   {
     id: "honeymoon",
-    name: "Honeymoon",
-    description: "Romantic getaways for newlyweds",
+    name: "Bulan Madu",
+    description: "Liburan romantis untuk pasangan baru",
     image: "/honeymoon.jpg",
   },
   {
     id: "wildlife",
-    name: "Wildlife & Nature",
-    description: "Explore natural wonders and ecosystems",
+    name: "Satwa Liar & Alam",
+    description: "Jelajahi keajaiban alam dan ekosistem",
     image: "/wildlife.jpg",
   },
   {
     id: "food",
-    name: "Food & Wine",
-    description: "Culinary journeys for food enthusiasts",
+    name: "Makanan & Anggur",
+    description: "Perjalanan kuliner untuk pecinta makanan",
     image: "/food-wine.jpg",
   },
 ];
 
 const allPackages = [
   {
-    name: "Italian Highlights",
-    location: "Italy",
+    name: "Sorotan Italia",
+    location: "Italia",
     image: "/italian.webp",
     rating: 4.7,
-    duration: "9 Days",
-    groupSize: "Max 16",
+    duration: "9 Hari",
+    groupSize: "Maks 16",
     price: 2199,
-    tag: "Popular",
+    tag: "Populer",
   },
   {
-    name: "Thailand Explorer",
+    name: "Penjelajah Thailand",
     location: "Thailand",
     image: "/thailand.jpg",
     rating: 4.8,
-    duration: "11 Days",
-    groupSize: "Max 12",
+    duration: "11 Hari",
+    groupSize: "Maks 12",
     price: 1799,
   },
   {
-    name: "Peruvian Andes Trek",
+    name: "Trek Andes Peru",
     location: "Peru",
     image: "/peruvian-andes.jpg",
     rating: 4.9,
-    duration: "10 Days",
-    groupSize: "Max 10",
+    duration: "10 Hari",
+    groupSize: "Maks 10",
     price: 2399,
-    tag: "Adventure",
+    tag: "Petualangan",
   },
   {
-    name: "Moroccan Magic",
-    location: "Morocco",
+    name: "Keajaiban Maroko",
+    location: "Maroko",
     image: "/moroccan.png",
     rating: 4.7,
-    duration: "8 Days",
-    groupSize: "Max 14",
+    duration: "8 Hari",
+    groupSize: "Maks 14",
     price: 1599,
   },
   {
-    name: "Australian Outback",
+    name: "Pedalaman Australia",
     location: "Australia",
     image: "/australian.png",
     rating: 4.8,
-    duration: "12 Days",
-    groupSize: "Max 12",
+    duration: "12 Hari",
+    groupSize: "Maks 12",
     price: 3299,
-    tag: "Nature",
+    tag: "Alam",
   },
   {
-    name: "South African Safari",
-    location: "South Africa",
+    name: "Safari Afrika Selatan",
+    location: "Afrika Selatan",
     image: "/african-safari.jpg",
     rating: 4.9,
-    duration: "10 Days",
-    groupSize: "Max 8",
+    duration: "10 Hari",
+    groupSize: "Maks 8",
     price: 3599,
-    tag: "Wildlife",
+    tag: "Satwa Liar",
   },
   {
-    name: "Vietnam & Cambodia",
-    location: "Southeast Asia",
+    name: "Vietnam & Kamboja",
+    location: "Asia Tenggara",
     image: "/vietnam-and-cambodia.jpg",
     rating: 4.8,
-    duration: "14 Days",
-    groupSize: "Max 12",
+    duration: "14 Hari",
+    groupSize: "Maks 12",
     price: 2299,
   },
   {
-    name: "Icelandic Adventure",
-    location: "Iceland",
+    name: "Petualangan Islandia",
+    location: "Islandia",
     image: "/iceland-adventure.webp",
     rating: 4.8,
-    duration: "7 Days",
-    groupSize: "Max 10",
+    duration: "7 Hari",
+    groupSize: "Maks 10",
     price: 2799,
-    tag: "Nature",
+    tag: "Alam",
   },
   {
-    name: "Egyptian Wonders",
-    location: "Egypt",
+    name: "Keajaiban Mesir",
+    location: "Mesir",
     image: "/egytian.webp",
     rating: 4.7,
-    duration: "9 Days",
-    groupSize: "Max 16",
+    duration: "9 Hari",
+    groupSize: "Maks 16",
     price: 1999,
-    tag: "Historical",
+    tag: "Bersejarah",
   },
 ];
 
 const testimonials = [
   {
     name: "James Wilson",
-    package: "Greek Islands Explorer",
+    package: "Penjelajah Pulau Yunani",
     avatar: "/user2.jpg",
     rating: 5,
     comment:
-      "The Greek Islands package exceeded all our expectations. The private sunset cruise in Santorini was absolutely magical and something we'll remember forever.",
+      "Paket Pulau Yunani melebihi semua harapan kami. Pelayaran sunset pribadi di Santorini benar-benar ajaib dan sesuatu yang akan kami kenang selamanya.",
   },
   {
     name: "Aiko Tanaka",
-    package: "Japan Cultural Journey",
+    package: "Perjalanan Budaya Jepang",
     avatar: "/user1.jpg",
     rating: 5,
     comment:
-      "As someone of Japanese heritage, I was impressed by the authenticity of the cultural experiences. The ryokan stay was a highlight and our guide was exceptional.",
+      "Sebagai seseorang berketurunan Jepang, saya terkesan dengan keaslian pengalaman budayanya. Menginap di ryokan adalah highlight dan pemandu kami luar biasa.",
   },
   {
     name: "Carlos Mendez",
-    package: "Costa Rica Adventure",
+    package: "Petualangan Kosta Rika",
     avatar: "/user3.jpg",
     rating: 4,
     comment:
-      "Great adventure package with the perfect mix of activities and relaxation. Zip-lining through the cloud forest was incredible! Only giving 4 stars because one of the hotels wasn't as nice as expected.",
+      "Paket petualangan yang luar biasa dengan campuran aktivitas dan relaksasi yang sempurna. Zip-lining melalui hutan awan sangat menakjubkan! Hanya memberi 4 bintang karena salah satu hotel tidak sebaik yang diharapkan.",
   },
 ];

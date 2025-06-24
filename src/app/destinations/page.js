@@ -17,7 +17,7 @@ export default function DestinationsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-[50vh] bg-gradient-to-r from-teal-500 to-cyan-600">
+      <section className="relative w-full h-[50vh]" style={{background: 'linear-gradient(to right, #13315E, #1e4a7a)'}}>
         <div className="absolute inset-0 overflow-hidden">
           <Image
             src="/destinations-bg.webp"
@@ -38,69 +38,6 @@ export default function DestinationsPage() {
         </div>
       </section>
 
-      {/* Search and Filter */}
-      <section className="py-8 bg-white border-b">
-        <div className="px-4 md:px-10">
-          <div className="flex flex-col md:flex-row gap-4 items-center">
-            <div className="relative flex-1 max-md:w-full">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-              <Input
-                type="text"
-                placeholder="Search destinations..."
-                className="pl-10"
-              />
-            </div>
-            <div className="flex max-md:flex-wrap gap-4 w-full md:w-auto">
-              <Select>
-                <SelectTrigger className="w-full cursor-pointer">
-                  <SelectValue placeholder="Region" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Regions</SelectItem>
-                  <SelectItem value="europe">Europe</SelectItem>
-                  <SelectItem value="asia">Asia</SelectItem>
-                  <SelectItem value="americas">Americas</SelectItem>
-                  <SelectItem value="africa">Africa</SelectItem>
-                  <SelectItem value="oceania">Oceania</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Select>
-                <SelectTrigger className="w-full cursor-pointer">
-                  <SelectValue placeholder="Trip Type" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Types</SelectItem>
-                  <SelectItem value="beach">Beach</SelectItem>
-                  <SelectItem value="city">City Break</SelectItem>
-                  <SelectItem value="adventure">Adventure</SelectItem>
-                  <SelectItem value="cultural">Cultural</SelectItem>
-                  <SelectItem value="luxury">Luxury</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Select>
-                <SelectTrigger className="w-full cursor-pointer">
-                  <SelectValue placeholder="Duration" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Any Duration</SelectItem>
-                  <SelectItem value="short">1-3 Days</SelectItem>
-                  <SelectItem value="medium">4-7 Days</SelectItem>
-                  <SelectItem value="long">8-14 Days</SelectItem>
-                  <SelectItem value="extended">15+ Days</SelectItem>
-                </SelectContent>
-              </Select>
-
-              <Button variant="outline" className="flex items-center gap-2">
-                <Filter className="h-4 w-4" />
-                More Filters
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Destinations Grid */}
       <section className="py-12 bg-gray-50">
         <div className="px-4 md:px-10">
@@ -117,12 +54,12 @@ export default function DestinationsPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute top-2 right-2 bg-white/90 px-2 py-1 rounded text-sm font-medium text-teal-700 flex items-center">
+                  <div className="absolute top-2 right-2 bg-white/90 px-2 py-1 rounded text-sm font-medium flex items-center" style={{color: '#13315E'}}>
                     <Star className="h-4 w-4 text-yellow-500 mr-1 fill-yellow-500" />
                     {destination.rating}
                   </div>
                   {destination.popular && (
-                    <div className="absolute top-2 left-2 bg-teal-600 text-white px-2 py-1 rounded text-xs font-medium">
+                    <div className="absolute top-2 left-2 text-white px-2 py-1 rounded text-xs font-medium" style={{backgroundColor: '#13315E'}}>
                       Popular
                     </div>
                   )}
@@ -152,93 +89,18 @@ export default function DestinationsPage() {
                         </span>
                       </p>
                     </div>
-                    <Button
-                      variant="outline"
-                      className="border-teal-600 text-teal-600 hover:bg-teal-50"
-                    >
-                      View Details
-                    </Button>
+                    {/* PERBAIKAN: Link ke halaman detail */}
+                    <Link href={`/detail?id=${destination.slug}`}>
+                      <Button
+                        variant="outline"
+                        className="border-teal-600 text-teal-600 hover:bg-teal-50"
+                      >
+                        View Details
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-
-          <div className="flex justify-center mt-12">
-            <div className="flex gap-2">
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                1
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                2
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                3
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                ...
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="w-10 h-10 rounded-md cursor-pointer"
-              >
-                10
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Popular Regions */}
-      <section className="py-16 bg-white">
-        <div className="px-4 md:px-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
-              Explore by Region
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover amazing destinations across different parts of the world
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {regions.map((region, index) => (
-              <Link href={`/destinations?region=${region.id}`} key={index}>
-                <div className="relative h-64 rounded-xl overflow-hidden group">
-                  <Image
-                    src={region.image || "/placeholder.svg"}
-                    alt={region.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">
-                        {region.name}
-                      </h3>
-                      <p className="text-white/90">
-                        {region.count} Destinations
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Link>
             ))}
           </div>
         </div>
@@ -270,9 +132,10 @@ export default function DestinationsPage() {
   );
 }
 
-// Sample data
+// Sample data - TAMBAHKAN SLUG untuk setiap destinasi
 const allDestinations = [
   {
+    slug: "santorini", // TAMBAHAN
     name: "Santorini",
     location: "Greece",
     image: "/santorini.jpg",
@@ -284,6 +147,7 @@ const allDestinations = [
       "Experience the stunning white-washed buildings and blue domes overlooking the Aegean Sea in this iconic Greek island.",
   },
   {
+    slug: "bali", // TAMBAHAN
     name: "Bali",
     location: "Indonesia",
     image: "/bali.webp",
@@ -295,6 +159,7 @@ const allDestinations = [
       "Discover tropical beaches, lush rice terraces, and spiritual temples in the Island of the Gods.",
   },
   {
+    slug: "maldives", // TAMBAHAN
     name: "Maldives",
     location: "Indian Ocean",
     image: "/maldives.jpg",
@@ -306,6 +171,7 @@ const allDestinations = [
       "Relax in overwater bungalows and swim in crystal clear turquoise waters in this tropical paradise.",
   },
   {
+    slug: "paris", // TAMBAHAN
     name: "Paris",
     location: "France",
     image: "/paris.jpg",
@@ -317,6 +183,7 @@ const allDestinations = [
       "Explore the City of Light with its iconic Eiffel Tower, world-class museums, and charming cafés.",
   },
   {
+    slug: "tokyo", // TAMBAHAN
     name: "Tokyo",
     location: "Japan",
     image: "/tokyo.jpg",
@@ -328,6 +195,7 @@ const allDestinations = [
       "Experience the perfect blend of traditional culture and futuristic technology in Japan's vibrant capital.",
   },
   {
+    slug: "machu-picchu", // TAMBAHAN
     name: "Machu Picchu",
     location: "Peru",
     image: "/machu-picchu.jpg",
@@ -339,6 +207,7 @@ const allDestinations = [
       "Hike to the ancient Incan citadel set high in the Andes Mountains for a truly unforgettable experience.",
   },
   {
+    slug: "barcelona", // TAMBAHAN
     name: "Barcelona",
     location: "Spain",
     image: "/barcelona.jpg",
@@ -350,6 +219,7 @@ const allDestinations = [
       "Enjoy Gaudí's architectural masterpieces, Mediterranean beaches, and vibrant street life.",
   },
   {
+    slug: "cape-town", // TAMBAHAN
     name: "Cape Town",
     location: "South Africa",
     image: "/cape-town.jpg",

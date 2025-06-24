@@ -24,7 +24,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="flex h-16 items-center justify-between px-4 md:px-10">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-teal-600">Wanderlust</span>
+          <span className="text-2xl font-bold text-[#13315E]">Justtrip - Travel Agency</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -33,8 +33,8 @@ export default function Header() {
             <Link
               key={route.path}
               href={route.path}
-              className={`text-base font-medium transition-colors hover:text-teal-600 ${
-                pathname === route.path ? "text-teal-600" : "text-gray-600"
+              className={`text-base font-medium transition-colors hover:text-[#13315E] active:text-[#e6eaff] ${
+                pathname === route.path ? "text-[#13315E]" : "text-gray-600"
               }`}
             >
               {route.name}
@@ -44,10 +44,10 @@ export default function Header() {
 
         <div className="hidden md:flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <Phone className="h-4 w-4 text-teal-600" />
-            <span className="text-sm font-medium">1-800-TRAVEL</span>
+            <Phone className="h-4 w-4 text-[#13315E]" />
+            <span className="text-sm font-medium">082266478147</span>
           </div>
-          <Button className="bg-teal-600 hover:bg-teal-700 cursor-pointer text-base">
+          <Button className="bg-[#13315E] hover:bg-[#0f2849] cursor-pointer text-base">
             Book Now
           </Button>
         </div>
@@ -66,15 +66,15 @@ export default function Header() {
                 <Link
                   key={route.path}
                   href={route.path}
-                  className={`text-lg font-medium transition-colors hover:text-teal-600 ${
-                    pathname === route.path ? "text-teal-600" : "text-gray-600"
+                  className={`text-lg font-medium transition-colors hover:text-[#13315E] active:text-[#e6eaff] ${
+                    pathname === route.path ? "text-[#13315E]" : "text-gray-600"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {route.name}
                 </Link>
               ))}
-              <Button className="mt-4 bg-teal-600 hover:bg-teal-700">
+              <Button className="mt-4 bg-[#13315E] hover:bg-[#0f2849]">
                 Book Now
               </Button>
             </nav>

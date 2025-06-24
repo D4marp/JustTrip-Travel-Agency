@@ -6,14 +6,14 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Wanderlust Travel - Discover Amazing Destinations",
+  title: "Justtrip - Temukan Destinasi Menakjubkan",
   description:
-    "Book your dream vacation with Wanderlust Travel. Explore exotic destinations, luxury accommodations, and unforgettable experiences.",
+    "Pesan liburan impian Anda dengan Justtrip. Jelajahi destinasi eksotis, akomodasi mewah, dan pengalaman tak terlupakan.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={inter.className}>
         <Header />
         <main>{children}</main>

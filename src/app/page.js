@@ -1,107 +1,58 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MapPin, Star, Users } from "lucide-react";
+import { ArrowRight, MapPin, Star } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Mail } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-[80vh] bg-gradient-to-r from-teal-500 to-cyan-600">
+      <section className="relative w-full h-[80vh]" style={{background: 'linear-gradient(to right, #13315E, #1a4a7a)'}}>
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/hero-bg.jpg"
-            alt="Tropical beach destination"
+            src="/bromo.jpg"
+            alt="Destinasi pantai tropis"
             fill
             className="object-cover opacity-30"
             priority
           />
         </div>
-        <div className=" relative h-full flex flex-col justify-center items-center text-center px-4 md:px-6 py-12 space-y-6 text-white">
+        <div className="relative h-full flex flex-col justify-center items-center text-center px-4 md:px-6 py-12 space-y-6 text-white">
           <div className="space-y-4 max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-bold ">
-              Discover the World&apos;s Most Amazing Places
+              Temukan Tempat-Tempat Menakjubkan di Dunia
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
-              Find and book your perfect getaway with our curated selection of
-              stunning destinations
+              Temukan dan pesan liburan sempurna Anda dengan koleksi destinasi 
+              menakjubkan pilihan kami
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="bg-white text-base cursor-pointer text-teal-600 hover:bg-white/90 group"
-            >
-              Explore Destinations
-              <ArrowRight className="group-hover:translate-x-1 transition-all ease-in-out duration-200 h-4 w-4" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-teal-600 border-none text-base cursor-pointer"
-            >
-              View Special Offers
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Search Section */}
-      <section className="bg-white py-8">
-        <div className="px-4 md:px-6">
-          <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-lg -mt-16 relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="flex flex-col gap-1">
-                <label className="text-sm font-medium">Destination</label>
-                <div className="flex border rounded-md p-2">
-                  <MapPin className="h-5 w-5 text-teal-500 mr-2" />
-                  <input
-                    type="text"
-                    placeholder="Where to?"
-                    className="w-full outline-none"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col gap-1">
-                <label className="text-sm font-medium">Date</label>
-                <div className="flex border rounded-md p-2">
-                  <input type="date" className="w-full outline-none" />
-                </div>
-              </div>
-              <div className="flex flex-col gap-1">
-                <label className="text-sm font-medium">Travelers</label>
-                <div className="flex border rounded-md p-2">
-                  <Users className="h-5 w-5 text-teal-500 mr-2" />
-                  <select className="w-full outline-none bg-transparent">
-                    <option>1 Adult</option>
-                    <option>2 Adults</option>
-                    <option>2 Adults, 1 Child</option>
-                    <option>2 Adults, 2 Children</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <Button className="w-full mt-4 bg-teal-600 hover:bg-teal-700 text-base cursor-pointer py-6">
-              Search Trips
-            </Button>
+            <a href="#featured">
+              <Button
+                size="lg"
+                className="bg-white text-base cursor-pointer text-teal-600 hover:bg-white/90 group"
+              >
+                Jelajahi Destinasi
+                <ArrowRight className="group-hover:translate-x-1 transition-all ease-in-out duration-200 h-4 w-4 ml-2" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Featured Destinations */}
-      <section className="py-16 bg-gray-50">
+      <section id="featured" className="py-16 bg-gray-50">
         <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
-              Popular Destinations
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Destinasi Populer
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Explore our handpicked selection of stunning locations around the
-              globe
+              Jelajahi pilihan lokasi menakjubkan yang kami pilih khusus 
+              di seluruh dunia
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,46 +97,37 @@ export default function Home() {
                       <p className="font-bold text-teal-600">
                         ${destination.price}{" "}
                         <span className="text-sm font-normal text-gray-500">
-                          per person
+                          per orang
                         </span>
                       </p>
                     </div>
-                    <Button
-                      variant="outline"
-                      className="border-teal-600 cursor-pointer text-teal-600 hover:bg-teal-50"
-                    >
-                      View Details
-                    </Button>
+                    {/* LINK DIPERBAIKI: menggunakan query parameter */}
+                    <Link href={`/detail?id=${destination.slug}`}>
+                      <Button
+                        variant="outline"
+                        className="border-teal-600 cursor-pointer text-teal-600 hover:bg-teal-50"
+                      >
+                        Lihat Detail
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
             ))}
-          </div>
-          <div className="flex justify-center mt-12">
-            <Link href="/destinations">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-teal-600 cursor-pointer text-teal-600 hover:bg-teal-50"
-              >
-                View All Destinations
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
-        <div className=" px-4 md:px-10">
+        <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
-              Why Choose Us
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Mengapa Memilih Kami
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              We&apos;re dedicated to making your travel dreams come true with
-              exceptional service and unforgettable experiences
+              Kami berdedikasi untuk mewujudkan impian perjalanan Anda dengan 
+              layanan luar biasa dan pengalaman tak terlupakan
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -207,14 +149,14 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="py-16 bg-teal-50">
-        <div className=" px-4 md:px-10">
+        <div className="px-4 md:px-10">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold  text-gray-900 mb-4">
-              What Our Travelers Say
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Kata Pelanggan Kami
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Hear from our satisfied customers about their amazing travel
-              experiences
+              Dengarkan dari pelanggan yang puas tentang pengalaman perjalanan 
+              luar biasa mereka
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -258,45 +200,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter */}
-      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-teal-700 to-cyan-800 text-white">
-        <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/30 via-transparent to-transparent"></div>
-
-        <div className="px-4 md:px-10 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-extrabold mb-4 ">
-              Get Travel Inspiration & Exclusive Offers
-            </h2>
-            <p className="text-lg text-white/80 mb-8">
-              Subscribe to our newsletter for insider tips, new destinations,
-              and unbeatable deals.
-            </p>
-
-            <form className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-xl mx-auto">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full h-11 bg-white text-gray-900 placeholder:text-gray-500"
-              />
-              <Button
-                type="submit"
-                className="w-full sm:w-auto text-base bg-white text-teal-700 hover:bg-white/90 cursor-pointer h-full"
-              >
-                <Mail className="w-5 h-5" />
-                Subscribe
-              </Button>
-            </form>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
 
-// Sample data
+// Data destinasi
 const destinations = [
   {
+    slug: "santorini",
     name: "Santorini",
     location: "Greece",
     image: "/santorini.jpg",
@@ -305,6 +216,7 @@ const destinations = [
     price: 1299,
   },
   {
+    slug: "bali",
     name: "Bali",
     location: "Indonesia",
     image: "/bali.webp",
@@ -313,6 +225,7 @@ const destinations = [
     price: 1499,
   },
   {
+    slug: "maldives",
     name: "Maldives",
     location: "Indian Ocean",
     image: "/maldives.jpg",
@@ -321,6 +234,7 @@ const destinations = [
     price: 1899,
   },
   {
+    slug: "paris",
     name: "Paris",
     location: "France",
     image: "/paris.jpg",
@@ -329,6 +243,7 @@ const destinations = [
     price: 1199,
   },
   {
+    slug: "tokyo",
     name: "Tokyo",
     location: "Japan",
     image: "/tokyo.jpg",
@@ -337,6 +252,7 @@ const destinations = [
     price: 1699,
   },
   {
+    slug: "machu-picchu",
     name: "Machu Picchu",
     location: "Peru",
     image: "/machu-picchu.jpg",

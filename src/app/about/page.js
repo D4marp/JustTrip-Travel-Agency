@@ -8,11 +8,11 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full h-[50vh] bg-gradient-to-r from-teal-500 to-cyan-600">
+      <section className="relative w-full h-[50vh]" style={{background: 'linear-gradient(to right, #13315E, #1a4572)'}}>
         <div className="absolute inset-0 overflow-hidden">
           <Image
             src="/travel-team-bg.avif"
-            alt="Team of travel experts"
+            alt="Tim ahli travel"
             fill
             className="object-cover opacity-30"
             priority
@@ -20,11 +20,10 @@ export default function AboutPage() {
         </div>
         <div className="relative h-full flex flex-col justify-center items-center px-4 md:px-10 py-12 text-center text-white">
           <h1 className="text-4xl md:text-5xl font-bold  mb-4">
-            About Wanderlust Travel
+            Tentang Wanderlust Travel
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
-            We&apos;re passionate about creating unforgettable travel
-            experiences for our clients
+            Kami berdedikasi untuk menciptakan pengalaman perjalanan yang tak terlupakan bagi klien kami
           </p>
         </div>
       </section>
@@ -35,48 +34,42 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
-                Our Story
+                Cerita Kami
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  Founded in 2005, Wanderlust Travel began with a simple
-                  mission: to help people experience the world&apos;s most
-                  amazing destinations with ease, comfort, and authenticity.
+                  Didirikan pada tahun 2005, Wanderlust Travel dimulai dengan misi sederhana: membantu orang mengalami destinasi paling menakjubkan di dunia dengan mudah, nyaman, dan autentik.
                 </p>
                 <p>
-                  What started as a small team of passionate travelers has grown
-                  into a global company with offices in 12 countries, serving
-                  thousands of happy travelers each year.
+                  Yang dimulai sebagai tim kecil para traveler yang bersemangat telah berkembang menjadi perusahaan global dengan kantor di 12 negara, melayani ribuan traveler bahagia setiap tahun.
                 </p>
                 <p>
-                  Despite our growth, we&apos;ve never lost sight of what
-                  matters most - creating personalized travel experiences that
-                  transform lives and create lasting memories.
+                  Meskipun berkembang pesat, kami tidak pernah melupakan hal yang paling penting - menciptakan pengalaman perjalanan yang dipersonalisasi untuk mengubah hidup dan menciptakan kenangan abadi.
                 </p>
               </div>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-4xl font-bold text-teal-600">15+</p>
-                  <p className="text-gray-600">Years of Experience</p>
+                  <p className="text-4xl font-bold" style={{color: '#13315E'}}>15+</p>
+                  <p className="text-gray-600">Tahun Pengalaman</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-4xl font-bold text-teal-600">100+</p>
-                  <p className="text-gray-600">Destinations</p>
+                  <p className="text-4xl font-bold" style={{color: '#13315E'}}>100+</p>
+                  <p className="text-gray-600">Destinasi</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-4xl font-bold text-teal-600">50k+</p>
-                  <p className="text-gray-600">Happy Travelers</p>
+                  <p className="text-4xl font-bold" style={{color: '#13315E'}}>50k+</p>
+                  <p className="text-gray-600">Traveler Bahagia</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-4xl font-bold text-teal-600">12</p>
-                  <p className="text-gray-600">Global Offices</p>
+                  <p className="text-4xl font-bold" style={{color: '#13315E'}}>12</p>
+                  <p className="text-gray-600">Kantor Global</p>
                 </div>
               </div>
             </div>
             <div className="relative h-[500px] rounded-xl overflow-hidden">
               <Image
-                src="/travel-team-action.webp"
-                alt="Our team in action"
+                src="/justrip.jpeg"
+                alt="Tim kami beraksi"
                 fill
                 className="object-cover"
               />
@@ -90,17 +83,17 @@ export default function AboutPage() {
         <div className="px-4 md:px-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
-              Our Values
+              Nilai-Nilai Kami
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do
+              Prinsip yang memandu semua yang kami lakukan
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="h-12 w-12 rounded-full bg-teal-100 flex items-center justify-center mb-4">
-                  <value.icon className="h-6 w-6 text-teal-600" />
+                <div className="h-12 w-12 rounded-full flex items-center justify-center mb-4" style={{backgroundColor: '#13315E20'}}>
+                  <value.icon className="h-6 w-6" style={{color: '#13315E'}} />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
@@ -115,11 +108,10 @@ export default function AboutPage() {
         <div className="px-4 md:px-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
-              Meet Our Team
+              Tim Kami
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Passionate travel experts dedicated to creating your perfect
-              journey
+              Ahli travel bersemangat yang berdedikasi untuk menciptakan perjalanan sempurna Anda
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -134,7 +126,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <h3 className="text-xl font-bold">{member.name}</h3>
-                <p className="text-teal-600 mb-2">{member.role}</p>
+                <p className="mb-2" style={{color: '#13315E'}}>{member.role}</p>
                 <p className="text-gray-600 text-sm">{member.bio}</p>
               </div>
             ))}
@@ -143,23 +135,23 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-teal-50">
+      <section className="py-16" style={{backgroundColor: '#13315E15'}}>
         <div className="px-4 md:px-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-4">
-              Ready to Start Your Adventure?
+              Siap Memulai Petualangan Anda?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Let us help you plan the trip of a lifetime. Our travel experts
-              are ready to create your perfect itinerary.
+              Biarkan kami membantu Anda merencanakan perjalanan seumur hidup. Ahli travel kami siap menciptakan itinerary sempurna untuk Anda.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="bg-teal-600 hover:bg-teal-700 text-base cursor-pointer"
+                  className="text-base cursor-pointer text-white"
+                  style={{backgroundColor: '#13315E', ':hover': {backgroundColor: '#0f2a54'}}}
                 >
-                  Contact Us
+                  Hubungi Kami
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -167,9 +159,10 @@ export default function AboutPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-teal-600 text-teal-600 hover:bg-teal-50 cursor-pointer text-base"
+                  className="cursor-pointer text-base"
+                  style={{borderColor: '#13315E', color: '#13315E'}}
                 >
-                  Explore Destinations
+                  Jelajahi Destinasi
                 </Button>
               </Link>
             </div>
@@ -183,27 +176,27 @@ export default function AboutPage() {
 // Sample data
 const values = [
   {
-    title: "Excellence",
+    title: "Keunggulan",
     description:
-      "We strive for excellence in every aspect of our service, from planning to execution.",
+      "Kami berusaha untuk unggul dalam setiap aspek layanan kami, dari perencanaan hingga eksekusi.",
     icon: Award,
   },
   {
-    title: "Customer Focus",
+    title: "Fokus Pelanggan",
     description:
-      "Your satisfaction is our top priority. We listen to your needs and exceed your expectations.",
+      "Kepuasan Anda adalah prioritas utama kami. Kami mendengarkan kebutuhan Anda dan melampaui harapan Anda.",
     icon: Users,
   },
   {
-    title: "Sustainability",
+    title: "Keberlanjutan",
     description:
-      "We're committed to responsible travel that respects local cultures and protects the environment.",
+      "Kami berkomitmen pada travel yang bertanggung jawab yang menghormati budaya lokal dan melindungi lingkungan.",
     icon: Globe,
   },
   {
-    title: "Innovation",
+    title: "Inovasi",
     description:
-      "We constantly seek new ways to enhance your travel experience with innovative solutions.",
+      "Kami terus mencari cara baru untuk meningkatkan pengalaman travel Anda dengan solusi inovatif.",
     icon: Clock,
   },
 ];
@@ -211,26 +204,26 @@ const values = [
 const team = [
   {
     name: "Emily Chen",
-    role: "Founder & CEO",
+    role: "Pendiri & CEO",
     photo: "/user1.jpg",
-    bio: "With over 20 years of travel industry experience, Emily founded Wanderlust to share her passion for exploration.",
+    bio: "Dengan pengalaman lebih dari 20 tahun di industri travel, Emily mendirikan Wanderlust untuk berbagi passion-nya terhadap eksplorasi.",
   },
   {
     name: "David Rodriguez",
-    role: "Head of Operations",
+    role: "Kepala Operasional",
     photo: "/user4.avif",
-    bio: "David ensures that every trip runs smoothly, with meticulous attention to logistics and customer satisfaction.",
+    bio: "David memastikan setiap perjalanan berjalan lancar, dengan perhatian teliti terhadap logistik dan kepuasan pelanggan.",
   },
   {
     name: "Sarah Johnson",
-    role: "Destination Expert - Asia",
+    role: "Ahli Destinasi - Asia",
     photo: "/user3.jpg",
-    bio: "Having lived in 5 Asian countries, Sarah brings authentic local knowledge to our Asian travel packages.",
+    bio: "Setelah tinggal di 5 negara Asia, Sarah menghadirkan pengetahuan lokal autentik untuk paket travel Asia kami.",
   },
   {
     name: "Michael Okonkwo",
-    role: "Destination Expert - Africa",
+    role: "Ahli Destinasi - Afrika",
     photo: "/user2.jpg",
-    bio: "Born and raised in Kenya, Michael specializes in creating authentic African safari experiences.",
+    bio: "Lahir dan besar di Kenya, Michael mengkhususkan diri dalam menciptakan pengalaman safari Afrika yang autentik.",
   },
 ];

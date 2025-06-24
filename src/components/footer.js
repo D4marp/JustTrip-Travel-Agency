@@ -19,11 +19,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">
-              Wanderlust Travel
+              Justtrip - Travel
             </h3>
             <p className="mb-4 text-gray-400">
-              Making your travel dreams come true since 2005. Explore the world
-              with confidence and create unforgettable memories.
+              Mewujudkan impian perjalanan Anda sejak tahun 2000. Jelajahi dunia 
+              dengan percaya diri dan ciptakan kenangan yang tak terlupakan.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-gray-400 hover:text-teal-400">
@@ -34,23 +34,23 @@ export default function Footer() {
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-teal-400">
+              <Link href="https://www.instagram.com/justtrip_official?igsh=bGRwbGZrOWxybXpy" className="text-gray-400 hover:text-teal-400">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-teal-400">
+              <Link href="https://www.tiktok.com/@justtrip_official" className="text-gray-400 hover:text-teal-400">
                 <Youtube className="h-5 w-5" />
-                <span className="sr-only">YouTube</span>
+                <span className="sr-only">TikTok</span>
               </Link>
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">Tautan Cepat</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-gray-400 hover:text-teal-400">
-                  Home
+                  Beranda
                 </Link>
               </li>
               <li>
@@ -58,7 +58,7 @@ export default function Footer() {
                   href="/destinations"
                   className="text-gray-400 hover:text-teal-400"
                 >
-                  Destinations
+                  Destinasi
                 </Link>
               </li>
               <li>
@@ -66,7 +66,7 @@ export default function Footer() {
                   href="/packages"
                   className="text-gray-400 hover:text-teal-400"
                 >
-                  Travel Packages
+                  Paket Wisata
                 </Link>
               </li>
               <li>
@@ -74,7 +74,7 @@ export default function Footer() {
                   href="/about"
                   className="text-gray-400 hover:text-teal-400"
                 >
-                  About Us
+                  Tentang Kami
                 </Link>
               </li>
               <li>
@@ -82,67 +82,66 @@ export default function Footer() {
                   href="/contact"
                   className="text-gray-400 hover:text-teal-400"
                 >
-                  Contact
+                  Kontak
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Contact Us</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">Hubungi Kami</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-teal-500 mr-2 mt-0.5" />
                 <span className="text-gray-400">
-                  123 Travel Street, Cityville, Country, 12345
+                  Jl. Perjalanan No. 123, Kota, Indonesia, 12345
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-teal-500 mr-2" />
-                <span className="text-gray-400">1-800-TRAVEL</span>
+                <span className="text-gray-400">021-WISATA</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-teal-500 mr-2" />
-                <span className="text-gray-400">info@wanderlusttravel.com</span>
+                <span className="text-gray-400">info@justtrip.com</span>
               </li>
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-lg font-bold mb-4 text-white">Newsletter</h3>
             <p className="mb-4 text-gray-400">
-              Subscribe to our newsletter for travel tips and exclusive offers.
+              Berlangganan newsletter kami untuk tips perjalanan dan penawaran eksklusif.
             </p>
             <div className="space-y-2">
               <Input
                 type="email"
-                placeholder="Your email address"
+                placeholder="Alamat email Anda"
                 className="bg-gray-800 border-gray-700 text-white"
               />
               <Button className="w-full bg-teal-600 hover:bg-teal-700 cursor-pointer">
-                Subscribe
+                Berlangganan
               </Button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Wanderlust Travel. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} PT.TRISULA PANDU INDONESIA. Semua hak dilindungi.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Link
               href="/terms"
               className="text-gray-400 hover:text-teal-400 text-sm"
             >
-              Terms & Conditions
+              Syarat & Ketentuan
             </Link>
             <Link
               href="/privacy"
               className="text-gray-400 hover:text-teal-400 text-sm"
             >
-              Privacy Policy
+              Kebijakan Privasi
             </Link>
           </div>
         </div>
